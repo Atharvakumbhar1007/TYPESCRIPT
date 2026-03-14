@@ -23,3 +23,14 @@ console.log("Maximum value: ", Math.max(...c)); //Max needs values
 //merging array
 e = [...a, ...c];
 console.log("Merge: ", e);
+
+//Spread operator creates shallow copy
+f = [[1, 4, 5], [3, 5], 8, 9];
+g = [...f]; //shallow copy
+h = structuredClone(f) //deep copy
+console.log(g);
+f[2] = 10;
+f[1][1] = 45;
+console.log("shallow copy after charging:", g);
+//deep copy
+console.log("Deep copy:", h);
