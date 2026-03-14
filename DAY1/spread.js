@@ -19,3 +19,7 @@ d = [...c];//actual copy - new object
 console.log("Object Comparison: ", c === d);
 
 console.log("Maximum value: ", Math.max(...c)); //Max needs values
+
+//merging array
+e = [...a, ...c];
+console.log("Merge: ", e);
