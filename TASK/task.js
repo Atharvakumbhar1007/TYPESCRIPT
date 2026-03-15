@@ -11,7 +11,8 @@ console.log(fullPlaylist);
 
 //TASK 2
 
-fullPlaylist = [...nowplaying, ...upNext, ...queue];
+let [nowplaying, upNext, ...queue] = fullPlaylist;
+
 
 
 //TASK 3
