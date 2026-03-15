@@ -18,3 +18,29 @@ transactionStatus = Status.Approved;
 //remember.Enum is your own datatype
 
 console.log(Direction.Up, Direction.Right, transactionStatus);
+
+enum AllowedColors {
+    Red = "RED", Blue = "BLUE", Yellow = "YELLOW"
+}
+
+const teeColor = AllowedColors.Red;
+console.log(teeColor);
+
+//union type
+let id: string | number;
+//ID can be string or number
+//void means does not return anything
+function displayId(id: string | number): void {
+    if (typeof id === "string") {
+        console.log("String: ", id.toUpperCase());
+    }
+    else {
+        console.log("Number ", id.toFixed(2));
+    }
+}
+id = "abcde123";
+displayId(id);
+
+
+id = 1234.2;
+displayId(id);
