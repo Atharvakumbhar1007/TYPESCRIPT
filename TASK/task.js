@@ -6,13 +6,15 @@ const featuredArtist = {
     monthlyListeners: 85000000
 };
 //TASK 1
-fullPlaylist = [...topTracks, ...newReleases, "HANUMAN CHALISA"];
+fullPlaylist = [...topTracks, ...newReleases, ...topTracks];
 console.log(fullPlaylist);
 
 //TASK 2
 
 let [nowplaying, upNext, ...queue] = fullPlaylist;
-
+console.log("Nowplaying: ", nowplaying);
+console.log("UpNext", upNext);
+console.log("")
 
 
 //TASK 3
