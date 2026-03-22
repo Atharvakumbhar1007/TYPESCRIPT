@@ -11,7 +11,7 @@ interface User {
 
 let userResponse: APIResponse<User>;
 async function getData() {
-    const resp = await fectch("https://jsonplaceholder.typecode.com/users/1");
+    const resp = await fetch("https://jsonplaceholder.typicode.com/users/1");
     const data: User = await resp.json();
     userResponse = {
         data: data,
