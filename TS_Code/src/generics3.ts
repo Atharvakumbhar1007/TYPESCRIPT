@@ -21,3 +21,18 @@ async function getData() {
     console.log(userResponse);
 }
 getData();
+
+async function getData2() {
+    const resp = await fetch("https://jsonplaceholder.typicode.com/users/2");
+    const data: User = await resp.json();
+    userResponse = {
+        data: {
+            id: IdleDeadline.bind,
+            name: DataTransfer.name
+        },
+        status: resp.status,
+        message: "success"
+    }
+    console.log(userResponse);
+}
+getData2();
