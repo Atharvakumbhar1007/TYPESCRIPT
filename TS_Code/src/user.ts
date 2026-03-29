@@ -47,3 +47,24 @@ updatePu({ logged: false });
 console.log(pu);
 updatePu({ name: "Arvind", age: 45 });
 console.log(pu);
+
+//falsy and truthy values
+//null and undefine evaluate to false -> falsy value
+//anything withh value evaluates to true
+//# sourceMappingURL=user.js.map
+
+function update<T extends Object>(original: T, updates: Partial<T>): T {
+    return Object.assign(original, updates);
+}
+//earlier the error was that , t Could be a string , number (primitive) and not an object like User.
+//By using T extant oject - we cann ensure that only objects are provided
+//test the above with product type and paritally update it - this is production grade
+//modern
+
+function update_2<T extends Object>(original: T, upadtes: Partial<T>): T {
+    return { ...original, ...upadtes };
+}
+//immutable - reruired in react , redux , anguler
+
+const pu2 = update_2(pu, { name: "vihang" });
+console.log(pu2);
