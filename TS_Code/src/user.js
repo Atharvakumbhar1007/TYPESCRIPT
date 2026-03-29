@@ -14,8 +14,18 @@ const pu = {
     logged: true
 };
 console.log(pu);
-// type Display User:pick<User,name|age>;
-// create a variable for display user
-// Add data to it
-//print the data
+//let's say you want to update a data partially
+//partial - convert all fields to optional
+//basically update is now {name?,age?,logged?}
+function updatePu(update) {
+    pu.age = update.age ? update.age : pu.age;
+    pu.name = update.name ? update.name : pu.name;
+    pu.logged = update.logged ? update.logged : pu.logged;
+    //if logged is false, age is 0 -> it will evaluate to false
+}
+function updatePuModern(update) {
+    Object.assign(pu, update); //only chnage values if provude  <- recommended
+}
+updatePu({ logged: false });
+console.log(pu);
 //# sourceMappingURL=user.js.map

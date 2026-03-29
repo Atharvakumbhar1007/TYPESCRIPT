@@ -45,3 +45,5 @@ function updatePuModern(update: Partial<PublicUser>) {
 
 updatePu({ logged: false });
 console.log(pu);
+updatePu({ name: "Arvind", age: 45 });
+console.log(pu);

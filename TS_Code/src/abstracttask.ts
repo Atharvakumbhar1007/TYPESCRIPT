@@ -6,30 +6,46 @@
 //Also - no emply methods in concrete they must work (do something)
 
 abstract class Payment {
-    constructor(private bal: number = 0) {
+    constructor(protected bal: number = 0) { }
 
-    }
     abstract processPayment(amount: number): void;
 
     printReceipt(): void {
-        console.log("Amount Paid: ", this.bal);
+        console.log("Amount Paid:", this.bal);
     }
-
 }
+
+// Credit Card Payment
 class CreditCard extends Payment {
     processPayment(amount: number): void {
         if (amount <= 0) {
-            console.log("Invalid payment amount");
+            console.log("Invalid Credit Card Payment");
             return;
         }
+
+        this.bal += amount;
+        console.log("Processing Credit Card Payment of", amount);
     }
+}
+
+// Cash Payment
 class Cash extends Payment {
     processPayment(amount: number): void {
         if (amount <= 0) {
             console.log("Invalid Cash Payment");
             return;
         }
+
+        this.bal += amount;
+        console.log("Processing Cash Payment of", amount);
     }
 }
 
-}
+// Usage
+const cc = new CreditCard();
+cc.processPayment(500);
+cc.printReceipt();
+
+const cash = new Cash();
+cash.processPayment(300);
+cash.printReceipt();
