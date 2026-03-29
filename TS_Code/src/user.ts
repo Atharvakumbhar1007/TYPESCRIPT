@@ -29,7 +29,3 @@ const pu: PublicUser = {
     logged: true
 };
 console.log(pu);
-// type Display User:pick<User,name|age>;
-// create a variable for display user
-// Add data to it
-//print the data
