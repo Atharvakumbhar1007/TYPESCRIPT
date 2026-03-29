@@ -12,4 +12,14 @@ async function getData() {
     console.log(userResponse);
 }
 getData();
+async function getData2() {
+    const resp = await fetch("https://jsonplaceholder.typicode.com/users/2");
+    const data = await resp.json();
+    userResponse = {
+        data: data, // ✅ correct
+        status: resp.status,
+        message: "success"
+    };
+    console.log(userResponse);
+}
 //# sourceMappingURL=generics3.js.map
