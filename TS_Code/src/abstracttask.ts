@@ -15,7 +15,7 @@ abstract class Payment {
     }
 }
 
-// Credit Card Payment
+// CreditCard 
 class CreditCard extends Payment {
     processPayment(amount: number): void {
         if (amount <= 0) {
